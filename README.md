@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fake News Headline Detector — UI
 
-## Getting Started
+A polished **Next.js frontend** for a C++-powered NLP system that evaluates news headlines and visualizes fake-likelihood using calibrated, interpretable UI design.
 
-First, run the development server:
+🔗 **Live Demo:** https://nlp-fake-news-headline-detector-ui.vercel.app/
+**Please be patient for first query as the render server takes ≈ 1 minute to startup, queries after boot occur in 1-2 seconds**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This interface allows users to input a news headline and receive a **fake-likelihood score** displayed on a real-to-fake spectrum, along with a natural-language interpretation of the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal of this project is **not** to declare truth or intent, but to demonstrate how machine learning outputs can be communicated **responsibly and clearly** to users.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## How It Works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. A user enters a news headline
+2. The frontend sends the headline to a FastAPI backend
+3. A C++ NLP model returns a continuous fake-likelihood score
+4. The UI maps this score to:
+   - A visual real ↔ fake spectrum
+   - A calibrated natural-language prediction
+   - Clear uncertainty cues
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Frontend**
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Backend**
+- FastAPI
+- C++
+
+---
+
+## Design Principles
+
+- Avoid misleading “confidence percentages”
+- Treat ML output as **probabilistic signals**, not facts
+- Make uncertainty visible and intuitive
+- Prioritize clarity over false authority
+
+---
+
+## Important Note
+
+This project analyzes **linguistic patterns**, not factual correctness.  
+The output reflects similarity to patterns commonly seen in fake news headlines and **should not be interpreted as a statement of truth, intent, or credibility**.
+
+---
+
+## Related Repository
+
+- **Backend / API:** https://github.com/NeeleshN1/fake-news-headline-detector-api
+
+---
+
+## Screenshots
+
+## Author
+
+Built by **Neelesh Nayak** as a full-stack NLP portfolio project.

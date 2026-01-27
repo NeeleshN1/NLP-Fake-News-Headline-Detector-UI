@@ -5,6 +5,10 @@ A polished **Next.js frontend** for a C++-powered NLP system that evaluates news
 🔗 **Live Demo:** https://nlp-fake-news-headline-detector-ui.vercel.app/
 **Please be patient for first query as the render server takes ≈ 1 minute to startup, queries after boot occur in 1-2 seconds**
 
+## Demo
+
+![NLP Fake News Detector UI](NLP%20Fake%20News%20Detector.png)
+
 ---
 
 ## Overview

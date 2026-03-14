@@ -66,8 +66,6 @@ The output reflects similarity to patterns commonly seen in fake news headlines 
 
 ---
 
-## Screenshots
-
 ## Author
 
 Built by **Neelesh Nayak** as a full-stack NLP portfolio project.
